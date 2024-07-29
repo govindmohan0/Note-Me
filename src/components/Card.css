@@ -1,0 +1,31 @@
+.card {
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    color: #555;
+  }
+  
