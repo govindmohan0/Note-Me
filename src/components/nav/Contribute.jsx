@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Study from '../../assets/404Error.json';
+import Study from '../../assets/Contact.json';
 import Example from '../Example';
 import './Contribute.css';
 
