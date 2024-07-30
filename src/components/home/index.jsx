@@ -3,7 +3,8 @@ import { useAuth } from "../../contexts/authContext";
 import Example from "../Example";
 import Card from "../Card";
 import "./Home.css";
-
+import Bottom from "../Bottom";
+import Study from '../../assets/study1.json';
 const Home = () => {
   const { currentUser } = useAuth();
   return (
@@ -22,7 +23,7 @@ const Home = () => {
           </button>
         </div>
         <div className="w-1/2 flex justify-end">
-          <Example />
+        <Example animationData={Study} />
         </div>
       </div>
       <div className="card-container">
@@ -36,6 +37,7 @@ const Home = () => {
         <Card icon="💻" title="Java Programming" description="Programming" link="/java-programming" />
         <Card icon="🐍" title="Python Programming" description="Programming" link="/python-programming" />
       </div>
+<Bottom></Bottom>
     </>
   );
 };

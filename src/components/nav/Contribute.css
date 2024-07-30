@@ -1,0 +1,25 @@
+.contribute-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between form and animation */
+    padding: 20px;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .animation-container {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .contribute-container {
+      flex-direction: column;
+    }
+  }
+  
