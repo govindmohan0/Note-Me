@@ -7,6 +7,7 @@ import Home from './components/home'; // Ensure this path is correct
 import Contribute from './components/nav/Contribute'; // Ensure this path is correct
 import { AuthProvider } from './contexts/authContext';
 import NotFound from './components/nav/NotFound';
+import AboutUs from './components/nav/AboutUs';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/contribute" element={<Contribute title="Contribute" />} />
 <Route path="/contactus" element={<Contribute title="Contact Us" />} />
-
+<Route path="/aboutus" element={<AboutUs/>}/>
             <Route path="*" element={<NotFound/>} /> 
         </Routes>
       </div>
