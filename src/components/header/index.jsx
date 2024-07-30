@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <nav className='flex flex-row justify-between items-center w-full fixed top-0 left-0 h-12 px-4 bg-transparent text-gray-900 shadow-lg z-20'>
       <div className='text-xl font-bold'>
-        <Link to='/' className='hover:text-indigo-600 transition duration-400'>
+        <Link to='/home' className='hover:text-indigo-600 transition duration-400'>
           Note Me
         </Link>
       </div>
