@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Study from '../../assets/Contact.json';
 import Example from '../Example';
 import './Contribute.css';
+import HashLoader from "react-spinners/HashLoader";
 
 const Contribute = ({ title }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState(''); // For success or error messages
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,67 +39,88 @@ const Contribute = ({ title }) => {
     }
   };
 
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 8000);
+  }, []);
+
   return (
-    <div className="contribute-container flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="form-container bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">{title}</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-gray-700 font-medium mb-1" htmlFor="name">Name</label>
-            <input
-              id="name"
-              type="text"
-              placeholder="Your Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              required
-            />
+    <>
+      {loading ? (
+        <div className="flex items-center justify-center h-screen bg-gray-100">
+        <HashLoader
+          color={'#F37A24'}
+          loading={loading}
+          size={50}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+        </div>
+      ) : (
+        <div className="contribute-container flex justify-center items-center min-h-screen bg-gray-100">
+          <div className="form-container bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">{title}</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-gray-700 font-medium mb-1" htmlFor="name">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 font-medium mb-1" htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Your Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 font-medium mb-1" htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  required
+                />
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
+                >
+                  Send Email
+                </button>
+              </div>
+              {status && (
+                <div className={`mt-4 p-2 rounded-lg ${status.startsWith('Success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                  {status}
+                </div>
+              )}
+            </form>
           </div>
-          <div>
-            <label className="block text-gray-700 font-medium mb-1" htmlFor="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Your Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              required
-            />
+          <div className="animation-container">
+            <Example animationData={Study} />
           </div>
-          <div>
-            <label className="block text-gray-700 font-medium mb-1" htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              cols="30"
-              rows="5"
-              placeholder="Your Message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              required
-            />
-          </div>
-          <div>
-            <button
-              type="submit"
-              className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
-            >
-              Send Email
-            </button>
-          </div>
-          {status && (
-            <div className={`mt-4 p-2 rounded-lg ${status.startsWith('Success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-              {status}
-            </div>
-          )}
-        </form>
-      </div>
-      <div className="animation-container">
-        <Example animationData={Study} />
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 
