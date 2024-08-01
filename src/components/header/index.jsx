@@ -34,7 +34,7 @@ const Header = () => {
     >
       <div className='flex flex-row justify-between items-center h-full'>
         <div className='text-xl font-bold'>
-          <Link to='/home' className='hover:text-indigo-600 transition duration-400'>
+          <Link to='/' className='hover:text-indigo-600 transition duration-400'>
             Note Me
           </Link>
         </div>
