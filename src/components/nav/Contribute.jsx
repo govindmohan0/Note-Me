@@ -1,7 +1,7 @@
 // Contribute.js
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { useLoading } from '../Loading/LoadingContext'; // Correct import
+import { useLoading } from '../Loading/LoadingContext'; 
 import Study from '../../assets/Contact.json';
 import Example from '../Example';
 import HashLoader from 'react-spinners/HashLoader';
@@ -11,7 +11,7 @@ const Contribute = ({ title }) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
-  const { loading, setLoading } = useLoading(); // Correct usage
+  const { loading, setLoading } = useLoading();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
