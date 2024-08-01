@@ -1,4 +1,4 @@
-// In your Contribute component file
+// Contribute.js
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLoading } from '../Loading/LoadingContext'; // Correct import
@@ -45,7 +45,12 @@ const Contribute = ({ title }) => {
 
   return (
     <div className="contribute-container flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="form-container bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div className="form-container bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
+        {loading && (
+          <div className="absolute inset-0 bg-white bg-opacity-75 flex justify-center items-center">
+            <HashLoader color="#4A90E2" />
+          </div>
+        )}
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">{title}</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
