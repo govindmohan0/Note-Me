@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'; // Ensure you have react-router-dom ins
 
 const resources = [
   { title: 'Previous Paper', description: 'B.Tech, BCA, MCA', bgColor: 'bg-gray-200', icon: '📝', route: '/previous-paper' },
-  { title: 'Notes', description: 'KUK, AKTU (B.Tech)', bgColor: 'bg-blue-200', icon: '📒', route: '/notes' },
-  { title: 'Syllabus', description: 'KUK, AKTU (B.Tech)', bgColor: 'bg-yellow-200', icon: '📋', route: '/syllabus' },
+  { title: 'Notes', description: 'SRM AP (B.Tech)', bgColor: 'bg-blue-200', icon: '📒', route: '/notes' },
+  { title: 'Syllabus', description: 'SRM AP (B.Tech)', bgColor: 'bg-yellow-200', icon: '📋', route: '/syllabus' },
   { title: 'E-Books', description: 'Digital & Handwritten', bgColor: 'bg-gray-200', icon: '📚', route: '/ebooks' },
   { title: 'C', description: 'Programming', bgColor: 'bg-green-200', icon: '💻', route: '/c' },
   { title: 'C++', description: 'Programming', bgColor: 'bg-blue-200', icon: '💻', route: '/cpp' },
