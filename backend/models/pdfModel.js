@@ -6,7 +6,7 @@ const pdfSchema = new mongoose.Schema({
   filename: String,
   originalName: String,
   uploadDate: { type: Date, default: Date.now },
-  // Add other fields as needed
+  // add other fields if needed
 });
 
 const PDF = mongoose.model('PDF', pdfSchema);
