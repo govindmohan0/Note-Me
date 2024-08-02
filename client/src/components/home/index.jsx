@@ -21,10 +21,11 @@ const Home = () => {
   const { currentUser } = useAuth();
 
   return (
-    <>
-      <div className="min-h-screen bg-gray-100 flex items-center justify-between p-8">
+    <div className="min-h-screen bg-gray-100">
+      <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between">
+        {/* Left Column */}
         <div className="w-full md:w-1/2">
-          <div className="text-5xl font-bold pb-20">
+          <div className="text-5xl font-bold pb-8 md:pb-20">
             Hello <span className="text-yellow-500">{currentUser.displayName ? currentUser.displayName : currentUser.email}</span>,
           </div>
           <h1 className="text-6xl font-bold text-red-700">
@@ -39,17 +40,26 @@ const Home = () => {
             </button>
           </Link>
         </div>
+
+        {/* Right Column (Desktop Only) */}
         <div className="hidden md:block w-1/2 flex justify-end">
           <Example animationData={Study} />
         </div>
       </div>
 
+      {/* Example Component (Mobile Only) */}
+      <div className="md:hidden px-4 py-8 flex justify-center">
+        <Example animationData={Study} />
+      </div>
+
+      {/* Resource Grid */}
       <div className="p-8 bg-gray-100">
         <ResourceGrid />
       </div>
       
+      {/* Bottom Component */}
       <Bottom />
-    </>
+    </div>
   );
 };
 

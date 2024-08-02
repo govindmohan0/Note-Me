@@ -28,18 +28,22 @@ const Header = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full h-12 px-4 bg-transparent text-gray-900 shadow-lg z-20 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full h-16 px-4 bg-white text-gray-900 shadow-lg z-20 transition-transform duration-300 ${
         scrollingUp ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className='flex flex-row justify-between items-center h-full'>
+      <div className='container mx-auto flex justify-between items-center h-full'>
+        {/* Logo */}
         <div className='text-2xl font-bold'>
           <Link to='/' className='hover:text-indigo-600 transition duration-400'>
             Note Me
           </Link>
         </div>
+
+        {/* Navigation Links */}
         <div className='flex gap-x-4 items-center'>
           {userLoggedIn ? (
+            // Links for logged-in users
             <>
               <Link to='/contactus' className='text-sm font-bold hover:text-indigo-600 transition duration-400'>
                 Contact Us
@@ -64,6 +68,7 @@ const Header = () => {
               </div>
             </>
           ) : (
+            // Links for non-logged-in users
             <>
               <Link className='text-sm font-semibold hover:text-indigo-600 transition duration-400' to='/login'>
                 Login
