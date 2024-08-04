@@ -45,13 +45,13 @@ const Contribute = ({ title }) => {
   return (
     <div className="contribute-container flex flex-col md:flex-row justify-center items-center min-h-screen bg-gray-100">
       {/* Left Column: Form */}
-      <div className="form-container bg-white p-8 rounded-lg shadow-lg w-full max-w-md md:mr-8">
+      <div className="form-container bg-slate-700 p-8 rounded-lg shadow-lg w-full max-w-md md:mr-8">
         {loading && (
           <div className="absolute inset-0 bg-white bg-opacity-75 flex justify-center items-center">
             <HashLoader color="#4A90E2" />
           </div>
         )}
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">{title}</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-white">{title}</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-gray-700 font-medium mb-1" htmlFor="name">Name</label>

@@ -15,7 +15,7 @@ const resources = [
 const ResourceGrid = () => {
   return (
     <div className="min-h-8 bg-blue-50 flex flex-col items-center p-8">
-      <p className="text-center text-3xl font-bold mb-8">Resources</p>
+      <p className="text-center text-3xl font-bold mb-8 text-black">Resources</p>
       <div className="grid grid-cols-4 gap-8 p-8 bg-gray-800 rounded-lg shadow-xl">
         {resources.map((resource, index) => (
           <Link to={resource.route} key={index} className="relative block">
