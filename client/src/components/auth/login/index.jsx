@@ -38,7 +38,7 @@ const Login = () => {
                 <div className="w-96 text-gray-600 space-y-5 p-4 shadow-xl border rounded-xl">
                     <div className="text-center">
                         <div className="mt-2">
-                            <h3 className="text-gray-800 text-xl font-bold sm:text-2xl text-white ">Welcome Back To Note Me</h3>
+                            <h3 className="text-gray-800 text-xl font-bold sm:text-2xl text-black ">Welcome Back To Note Me</h3>
                         </div>
                     </div>
                     <form
