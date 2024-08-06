@@ -5,17 +5,8 @@ import ResourceGrid from "../Resources/ResourceGrid";
 import "./Home.css";
 import Bottom from "../Bottom";
 import Study from '../../assets/study1.json';
-import IDE from "../IDE/IDE";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-// Define theme if not already defined
-const theme = extendTheme({
-  config: {
-    initialColorMode: "dark",
-    useSystemColorMode: false,
-  },
-});
 
 const Home = () => {
   const { currentUser } = useAuth();

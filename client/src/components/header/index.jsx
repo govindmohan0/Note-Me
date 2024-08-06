@@ -45,6 +45,9 @@ const Header = () => {
           {userLoggedIn ? (
             // Links for logged-in users
             <>
+            <Link to='/onlinecompiler' className='text-sm font-bold hover:text-indigo-600 transition duration-400'>
+                Online Compiler
+              </Link>
               <Link to='/contactus' className='text-sm font-bold hover:text-indigo-600 transition duration-400'>
                 Contact Us
               </Link>

@@ -1,15 +1,13 @@
 // src/components/Resources/Notes.jsx
-import React from "react";
-import IDE from "../IDE/IDE.jsx";
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../IDE/theme.js";
+import React from 'react'
 
-const Notes = () => (
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <IDE />
-    </ChakraProvider>
-  </React.StrictMode>
-);
 
-export default Notes;
+const Notes = () => {
+  return (
+<div>
+  <h1>hello</h1>
+</div>
+  )
+}
+
+export default Notes
