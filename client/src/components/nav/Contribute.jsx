@@ -48,7 +48,7 @@ const Contribute = ({ title }) => {
       {/* Left Column: Form */}
       <div className="form-container bg-slate-700 p-8 rounded-lg shadow-lg w-full max-w-md md:mr-8">
         {loading && (
-          <div className="absolute inset-0 bg-white bg-opacity-75 flex justify-center items-center">
+          <div className="absolute inset-0 bg-black bg-opacity-75 flex justify-center items-center">
             <HashLoader color="#4A90E2" />
           </div>
         )}

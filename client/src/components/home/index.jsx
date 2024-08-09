@@ -6,6 +6,7 @@ import "./Home.css";
 import Bottom from "../Bottom";
 import Study from '../../assets/study1.json';
 import { Link } from "react-router-dom";
+import Tutorial from "../Resources/Tutorial";
 
 
 const Home = () => {
@@ -48,6 +49,8 @@ const Home = () => {
         <ResourceGrid />
 
       
+   
+      <Tutorial/>
       {/* Bottom Component */}
       <Bottom />
     </div>

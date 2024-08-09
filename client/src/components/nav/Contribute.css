@@ -23,6 +23,6 @@
     }
   }
   .form-container:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adjust the glow effect as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
   }
   

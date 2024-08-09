@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
 import { doSignOut } from '../../firebase/auth';
+import { FaSignOutAlt } from 'react-icons/fa'; // Import the logout icon from react-icons
 
 const Header = () => {
   const navigate = useNavigate();
@@ -43,9 +44,8 @@ const Header = () => {
         {/* Navigation Links */}
         <div className='flex gap-x-4 items-center'>
           {userLoggedIn ? (
-            // Links for logged-in users
             <>
-            <Link to='/onlinecompiler' className='text-white text-sm font-bold hover:text-indigo-600 transition duration-400'>
+              <Link to='/onlinecompiler' className='text-white text-sm font-bold hover:text-indigo-600 transition duration-400'>
                 Online Compiler
               </Link>
               <Link to='/contactus' className='text-white text-sm font-bold hover:text-indigo-600 transition duration-400'>
@@ -64,9 +64,9 @@ const Header = () => {
                       navigate('/login');
                     });
                   }}
-                  className='text-sm font-bold text-white hover:text-indigo-600 transition duration-400'
+                  className='text-white hover:text-indigo-600 transition duration-400 flex items-center'
                 >
-                  Logout
+                  <FaSignOutAlt className="mr-2 h-5 w-4 text-gray-400"/>
                 </button>
               </div>
             </>
