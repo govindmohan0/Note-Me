@@ -28,14 +28,14 @@ const Header = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full h-16 px-4 bg-white text-gray-900 shadow-lg z-20 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full h-16 px-4 bg-black text-gray-900 shadow-lg z-20 transition-transform duration-600 ${
         scrollingUp ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
       <div className='container mx-auto flex justify-between items-center h-full'>
         {/* Logo */}
         <div className='text-2xl font-bold'>
-          <Link to='/' className='hover:text-indigo-600 transition duration-400'>
+          <Link to='/' className='text-white hover:text-indigo-600 transition duration-600'>
             Note Me
           </Link>
         </div>
@@ -45,16 +45,16 @@ const Header = () => {
           {userLoggedIn ? (
             // Links for logged-in users
             <>
-            <Link to='/onlinecompiler' className='text-sm font-bold hover:text-indigo-600 transition duration-400'>
+            <Link to='/onlinecompiler' className='text-white text-sm font-bold hover:text-indigo-600 transition duration-400'>
                 Online Compiler
               </Link>
-              <Link to='/contactus' className='text-sm font-bold hover:text-indigo-600 transition duration-400'>
+              <Link to='/contactus' className='text-white text-sm font-bold hover:text-indigo-600 transition duration-400'>
                 Contact Us
               </Link>
-              <Link to='/aboutus' className='text-sm font-bold hover:text-indigo-600 transition duration-400'>
+              <Link to='/aboutus' className=' text-white text-sm font-bold hover:text-indigo-600 transition duration-400'>
                 About Us
               </Link>
-              <Link to='/contribute' className='text-sm font-bold hover:text-indigo-600 transition duration-400'>
+              <Link to='/contribute' className=' text-white text-sm font-bold hover:text-indigo-600 transition duration-400'>
                 Contribute
               </Link>
               <div className='ml-auto'>
@@ -64,19 +64,18 @@ const Header = () => {
                       navigate('/login');
                     });
                   }}
-                  className='text-sm font-bold hover:text-indigo-600 transition duration-400'
+                  className='text-sm font-bold text-white hover:text-indigo-600 transition duration-400'
                 >
                   Logout
                 </button>
               </div>
             </>
           ) : (
-            // Links for non-logged-in users
             <>
-              <Link className='text-sm font-semibold hover:text-indigo-600 transition duration-400' to='/login'>
+              <Link className='text-sm font-semibold text-white hover:text-indigo-600 transition duration-400' to='/login'>
                 Login
               </Link>
-              <Link className='text-sm font-semibold hover:text-indigo-600 transition duration-300' to='/register'>
+              <Link className='text-sm font-semibold text-white hover:text-indigo-600 transition duration-300' to='/register'>
                 Register
               </Link>
             </>

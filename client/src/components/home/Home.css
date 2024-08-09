@@ -1,8 +1,48 @@
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-items: center;
-    background-color: #5999c7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  background-color: #2c3e50; /* Darker background for better contrast */
+}
+
+@keyframes modern-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
   }
-  
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+  }
+}
+
+.glowing-shadow {
+  animation: modern-glow 3s ease-in-out infinite;
+}
+.contribute-container {
+  background-color: #000; /* Black background for the entire container */
+  position: relative; /* To properly position the loader */
+}
+
+.form-container {
+  position: relative; /* Ensure that the glow effect is positioned correctly */
+  background-color: #2c3e50; /* Slightly lighter background for contrast */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.3); /* Yellow glow effect */
+  animation: yellow-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes yellow-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.7);
+  }
+}
+
+.animation-container {
+  /* Ensure proper styling for animation containers if needed */
+}
+
+

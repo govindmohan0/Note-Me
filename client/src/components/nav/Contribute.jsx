@@ -4,6 +4,7 @@ import { useLoading } from '../Loading/LoadingContext';
 import Study from '../../assets/Contact.json';
 import Example from '../Example';
 import HashLoader from 'react-spinners/HashLoader';
+ 
 
 const Contribute = ({ title }) => {
   const [name, setName] = useState('');
@@ -43,7 +44,7 @@ const Contribute = ({ title }) => {
   };
 
   return (
-    <div className="contribute-container flex flex-col md:flex-row justify-center items-center min-h-screen bg-gray-100">
+    <div className="contribute-container flex flex-col md:flex-row justify-center items-center min-h-screen bg-black">
       {/* Left Column: Form */}
       <div className="form-container bg-slate-700 p-8 rounded-lg shadow-lg w-full max-w-md md:mr-8">
         {loading && (

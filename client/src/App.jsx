@@ -19,7 +19,6 @@ import Java from './components/Resources/Java';
 import Syllabus from './components/Resources/Syllabus';
 import LoadingSpinner from './components/Loading/LoadingSpinner';
 import Landing from './components/IDE/CodeEditor/Landing';
-
 function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -39,9 +38,9 @@ function App() {
       <LoadingProvider>
         {/* Conditionally render Header based on the current path */}
         {!isOnlineCompiler && <Header />}
-        {loading && <LoadingSpinner loading={loading} />} 
+        {loading && <LoadingSpinner loading={loading} />}
         {!loading && (
-          <div className={`w-full h-screen flex flex-col ${isOnlineCompiler ? 'bg-gray-900' : 'bg-white'}`}>
+          <div className="w-full h-screen flex flex-col">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
@@ -51,7 +50,7 @@ function App() {
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/previous-paper" element={<Prevquestion />} />
-              <Route path="/notes" element={<Notes/>} />
+              <Route path="/notes" element={<Notes />} />
               <Route path="/ebooks" element={<Ebook />} />
               <Route path="/syllabus" element={<Syllabus />} />
               <Route path="/c" element={<CLanguage />} />

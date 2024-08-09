@@ -181,7 +181,7 @@ const Landing = () => {
         draggable
       />
 
-  <div className="flex flex-row px-4 py-2 dark:bg-gray-900 dark:text-gray-100">
+  <div className="flex flex-row px-4 py-2 dark:bg-black dark:text-gray-100 rounded-xl">
         <div className="px-4 py-2">
           <LanguagesDropdown onSelectChange={onSelectChange} />
         </div>
@@ -189,8 +189,8 @@ const Landing = () => {
           <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
         </div>
       </div>
-      <div className="flex flex-row space-x-4 items-start px-4 py-4 dark:bg-gray-900">
-        <div className="flex flex-col w-full h-full justify-start items-end border-2 border-gray-950">
+      <div className="flex flex-row space-x-4 items-start px-4 py-4 dark:bg-zinc-900 rounded-3xl">
+        <div className="flex flex-col w-full h-full justify-start items-end border-2 border-gray-800 rounded-lg">
           <CodeEditorWindow
             code={code}
             onChange={onChange}
@@ -199,7 +199,7 @@ const Landing = () => {
           />
         </div>
 
-        <div className="right-container flex flex-shrink-0 w-[30%] flex-col dark:bg-gray-800  border-2 border-gray-950">
+        <div className="right-container flex flex-shrink-0 w-[30%] flex-col dark:bg-black  border-2 border-gray-800 rounded-xl">
           <OutputWindow  outputDetails={outputDetails} />
           <div className="flex flex-col items-end px-4 py-4">
             <CustomInput
