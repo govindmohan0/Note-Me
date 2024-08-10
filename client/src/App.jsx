@@ -19,6 +19,15 @@ import Java from './components/Resources/Java';
 import Syllabus from './components/Resources/Syllabus';
 import LoadingSpinner from './components/Loading/LoadingSpinner';
 import Landing from './components/IDE/CodeEditor/Landing';
+import REACTjs from './components/Resources/REACTjs';
+import SQL from './components/Resources/SQL';
+import DAA from './components/Resources/DAA';
+import JS from './components/Resources/JS';
+import DSA from './components/Resources/DSA';
+import OS from './components/Resources/OS';
+import CN from './components/Resources/CN';
+import DBMS from './components/Resources/DBMS';
+
 function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -58,6 +67,14 @@ function App() {
               <Route path="/python" element={<Python />} />
               <Route path="/java" element={<Java />} />
               <Route path="/onlinecompiler" element={<Landing />} />
+              <Route path="/dsa" element={<DSA />} />
+              <Route path="/os" element={<OS />} />
+              <Route path="/cn" element={<CN />} />
+              <Route path="/dbms" element={<DBMS />} />
+              <Route path="/js" element={<JS />} />
+              <Route path="/daa" element={<DAA />} />
+              <Route path="/sql" element={<SQL />} />
+              <Route path="/react" element={<REACTjs />} />
             </Routes>
           </div>
         )}

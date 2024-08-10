@@ -8,6 +8,7 @@ import Study from '../../assets/study1.json';
 import { Link } from "react-router-dom";
 import Tutorial from "../Resources/Tutorial";
 import DropdownInfo from "../DropdownInfo";
+import StudentReview from "../StudentReview";
 
 
 const Home = () => {
@@ -55,6 +56,8 @@ const Home = () => {
       
       
       <DropdownInfo/>
+      
+      <StudentReview/>
       {/* Bottom Component */}
       <Bottom />
 
