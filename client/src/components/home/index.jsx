@@ -7,6 +7,7 @@ import Bottom from "../Bottom";
 import Study from '../../assets/study1.json';
 import { Link } from "react-router-dom";
 import Tutorial from "../Resources/Tutorial";
+import DropdownInfo from "../DropdownInfo";
 
 
 const Home = () => {
@@ -51,8 +52,12 @@ const Home = () => {
       
    
       <Tutorial/>
+      
+      
+      <DropdownInfo/>
       {/* Bottom Component */}
       <Bottom />
+
     </div>
   );
 };
