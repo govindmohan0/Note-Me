@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { useLoading } from '../Loading/LoadingContext'; 
+import { useLoading } from '../Loading/LoadingContext';
 import Study from '../../assets/Contact.json';
 import Example from '../Example';
 import HashLoader from 'react-spinners/HashLoader';
- 
 
 const Contribute = ({ title }) => {
   const [name, setName] = useState('');
@@ -38,14 +37,21 @@ const Contribute = ({ title }) => {
     } catch (error) {
       console.error('Error sending email:', error);
       setStatus('Error! There was a problem sending your message.');
+      // Log additional error details to the console
+      if (error.response) {
+        console.error('Response error:', error.response);
+      } else if (error.request) {
+        console.error('Request error:', error.request);
+      } else {
+        console.error('Error message:', error.message);
+      }
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="contribute-container flex flex-col md:flex-row justify-center items-center min-h-screen bg-black">
-      {/* Left Column: Form */}
+    <div className="contribute-container flex flex-col md:flex-row justify-center items-center min-h-screen bg-black relative">
       <div className="form-container bg-slate-700 p-8 rounded-lg shadow-lg w-full max-w-md md:mr-8">
         {loading && (
           <div className="absolute inset-0 bg-black bg-opacity-75 flex justify-center items-center">
@@ -62,7 +68,7 @@ const Contribute = ({ title }) => {
               placeholder="Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
             />
           </div>
@@ -74,7 +80,7 @@ const Contribute = ({ title }) => {
               placeholder="Your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
             />
           </div>
@@ -87,7 +93,7 @@ const Contribute = ({ title }) => {
               placeholder="Your Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
             />
           </div>
@@ -107,12 +113,10 @@ const Contribute = ({ title }) => {
         </form>
       </div>
 
-      {/* Right Column (Desktop Only): Animation */}
       <div className="animation-container hidden md:block w-full md:w-1/2 mt-8 md:mt-0">
         <Example animationData={Study} />
       </div>
 
-      {/* Animation (Mobile Only): Below Form */}
       <div className="animation-container md:hidden w-full mt-8">
         <Example animationData={Study} />
       </div>
