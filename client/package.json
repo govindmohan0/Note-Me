@@ -22,7 +22,7 @@
     "axios": "^1.7.3",
     "firebase": "^10.12.4",
     "flowbite-react": "^0.10.1",
-    "framer-motion": "^11.3.21",
+    "framer-motion": "^11.3.24",
     "lottie-react": "^2.4.0",
     "monaco-editor": "^0.44.0",
     "monaco-themes": "^0.4.4",

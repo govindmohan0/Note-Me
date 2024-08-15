@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Tutorial = () => {
     const tutorials = [
@@ -16,15 +17,30 @@ const Tutorial = () => {
         { icon: 'https://imgs.search.brave.com/iFScTRKbWbvN_j5rO1L5slKob2IFxkCQ9az2IV5pMcE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIwLzA4/L015U1FMLUxvZ28t/NTAweDMxMy5wbmc', title: 'SQL', description: 'Tutorial', link: '/sql' },
         { icon: 'https://imgs.search.brave.com/CQbryDwdAyF7tzJAkmgUm2GiqjquFjxuCYJeDI9GRJI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtMy82/MDAvUmVhY3QuanNf/bG9nby01MTIucG5n', title: 'REACT', description: 'Tutorial', link: '/react' },
     ];
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.2, // delay for each card based on its index
+            },
+        }),
+    };
 
     return (
         <div className="bg-black text-white py-8">
             <h2 className="text-4xl font-bold text-pink-500 mb-8 text-center">Tutorials</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
                 {tutorials.map((tutorial, index) => (
-                    <div
+                    <motion.div
                         className="bg-zinc-900 rounded-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-lg"
                         key={index}
+                        custom={index}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        variants={cardVariants}
                     >
                         <div className="mb-4">
                             <img src={tutorial.icon} alt={`${tutorial.title} Icon`} className="w-16 h-16 mx-auto rounded-lg" />
@@ -37,7 +53,7 @@ const Tutorial = () => {
                         >
                             Explore Now
                         </Link>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

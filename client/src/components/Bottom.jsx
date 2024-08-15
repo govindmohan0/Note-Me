@@ -4,7 +4,7 @@ const Bottom = () => {
   return (
     
 
-<footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+<footer className="bg-white rounded-lg shadow dark:bg-neutral-900 m-4">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
             <a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -15,10 +15,10 @@ const Bottom = () => {
                     <a href="/aboutus" className="hover:underline me-4 md:me-6">About</a>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    <a href="/" className="hover:underline me-4 md:me-6">Privacy Policy</a>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
+                    <a href="/" className="hover:underline me-4 md:me-6">Licensing</a>
                 </li>
                 <li>
                     <a href="/contactus" className="hover:underline">Contact</a>
@@ -26,7 +26,7 @@ const Bottom = () => {
             </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" className="hover:underline">Note Me</a>. All Rights Reserved.</span>
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" className="hover:underline">Note Me</a>. All Rights Reserved.</span>
     </div>
 </footer>
 

@@ -16,7 +16,7 @@
 }
 
 .glowing-shadow {
-  animation: modern-glow 3s ease-in-out infinite;
+  animation: modern-glow 4s ease-in-out infinite;
 }
 .contribute-container {
   background-color: #000; /* Black background for the entire container */
@@ -29,20 +29,18 @@
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 20px rgba(255, 255, 0, 0.497); /* Yellow glow effect */
-  animation: yellow-glow 5s ease-in-out infinite;
+  animation: yellow-glow 4s ease-in-out infinite;
 }
 
 @keyframes yellow-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
+    box-shadow: 0 0 20px rgba(74, 34, 140, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(255, 255, 0, 0.7);
+    box-shadow: 0 0 30px rgba(120, 31, 255, 0.7);
   }
 }
 
-.animation-container {
- 
-}
+
 
 

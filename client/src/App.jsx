@@ -75,6 +75,9 @@ function App() {
               <Route path="/daa" element={<DAA />} />
               <Route path="/sql" element={<SQL />} />
               <Route path="/react" element={<REACTjs />} />
+            {/*  <Route path="/c/:courseId/topic/:topicId" component={AboutUs} />   */}
+
+
             </Routes>
           </div>
         )}
