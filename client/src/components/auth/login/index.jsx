@@ -113,4 +113,4 @@ const Login = () => {
     )
 }
 
-export default Login.apply.
+export default Login
