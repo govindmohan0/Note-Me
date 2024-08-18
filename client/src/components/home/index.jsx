@@ -10,30 +10,29 @@ import Tutorial from "../Resources/Tutorial";
 import DropdownInfo from "../DropdownInfo";
 import StudentReview from "../StudentReview";
 
-
 const Home = () => {
   const { currentUser } = useAuth();
 
   return (
-    <div className="min-h-screen bg-black">
-      <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between">
+    <div className="min-h-screen bg-black p-4 md:p-14">
+      <div className="container mx-auto flex flex-col md:flex-row items-center md:justify-between">
         {/* Left Column */}
-        <div className="w-full md:w-1/2">
-          <div className="text-5xl font-bold pb-8 md:pb-20 text-gray-300">
+        <div className="w-full md:w-1/2 mb-8 md:mb-0">
+          <div className="text-4xl md:text-5xl font-bold pb-4 md:pb-8 text-gray-300">
             Hello{" "}
             <span className="text-yellow-500">
               {currentUser ? (currentUser.displayName ? currentUser.displayName : currentUser.email) : 'Guest'}
             </span>
             ,
           </div>
-          <h1 className="text-6xl font-bold text-red-700">
+          <h1 className="text-4xl md:text-6xl font-bold text-red-700">
             Learn <span className="text-red-700">With Note Me</span>
           </h1>
-          <p className="mt-4 text-3xl text-gray-300">
+          <p className="mt-4 text-xl md:text-3xl text-gray-300">
             Prepare for academic exams and placement in minimum time without any hassle.
           </p>
           <Link to="/notes">
-            <button className="mt-8 bg-red-700 text-white px-6 py-3 rounded-full text-xl font-semibold hover:bg-red-800">
+            <button className="mt-8 bg-red-700 text-white px-6 py-3 rounded-full text-lg md:text-xl font-semibold hover:bg-red-800 transition duration-300">
               Let's Go
             </button>
           </Link>
@@ -45,22 +44,27 @@ const Home = () => {
         </div>
       </div>
 
-    
       {/* Resource Grid */}
-  
+      <div className="mt-12">
         <ResourceGrid />
+      </div>
 
-      
-   
-      <Tutorial/>
-      
-      
-      <DropdownInfo/>
-      
-      <StudentReview/>
+      <div className="mt-12">
+        <Tutorial />
+      </div>
+
+      <div className="mt-12">
+        <DropdownInfo />
+      </div>
+
+      <div className="mt-12">
+        <StudentReview />
+      </div>
+
       {/* Bottom Component */}
-      <Bottom />
-
+      <div className="mt-12">
+        <Bottom />
+      </div>
     </div>
   );
 };

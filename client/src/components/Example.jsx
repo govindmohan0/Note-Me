@@ -8,5 +8,4 @@ const Example = ({ animationData }) => {
     </div>
   );
 }
-
 export default Example;
