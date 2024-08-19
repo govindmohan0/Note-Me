@@ -11,7 +11,7 @@ const CLangauge = () => {
     const cLanguageOptions = [
         { name: 'Introduction', pdfUrl: 'https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf' },
         { name: 'Advanced C', pdfUrl: 'https://raw.githubusercontent.com/py-pdf/sample-files/main/004-pdflatex-4-pages/pdflatex-4-pages.pdf' },
-        { name: 'Data Structures', pdfUrl: 'https://www.some-other-pdf-url.com/data-structures.pdf' },
+        { name: 'Data Structures', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-Me/master/Govind%20Mohan%20Shah%20Resume.pdf'},
         { name: 'Algorithms', pdfUrl: 'https://www.some-other-pdf-url.com/algorithms.pdf' },
         { name: 'System Programming', pdfUrl: 'https://www.some-other-pdf-url.com/system-programming.pdf' },
         { name: 'Operating Systems', pdfUrl: 'https://www.some-other-pdf-url.com/operating-systems.pdf' },
@@ -22,6 +22,7 @@ const CLangauge = () => {
         { name: 'Operating Systems', pdfUrl: 'https://www.some-other-pdf-url.com/operating-systems.pdf' },  
         { name: 'Operating Systems', pdfUrl: 'https://www.some-other-pdf-url.com/operating-systems.pdf' },
         { name: 'Operating Systems', pdfUrl: 'https://www.some-other-pdf-url.com/operating-systems.pdf' },
+        // https://github.com/govindmohan0/Note-Me/blob/master/Govind%20Mohan%20Shah%20Resume.pdf
 
         // Add more options as needed
     ];

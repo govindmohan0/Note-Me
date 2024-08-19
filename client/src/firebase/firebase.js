@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDaftlKOQm1VF-eecf9I89zFxRmC2YfhjU",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "college-notes-85e6b.firebaseapp.com",
     projectId: "college-notes-85e6b",
     storageBucket: "college-notes-85e6b.appspot.com",
