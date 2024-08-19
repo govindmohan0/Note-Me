@@ -6,7 +6,6 @@ const CLangauge = () => {
     const [pdfUrl, setPdfUrl] = useState(
         "https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf"
     );
-
     // Define options specific to the C Language
     const cLanguageOptions = [
         { name: 'Introduction', pdfUrl: 'https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf' },
@@ -36,4 +35,3 @@ const CLangauge = () => {
         </div>
     );
 };
-export default CLangauge;
