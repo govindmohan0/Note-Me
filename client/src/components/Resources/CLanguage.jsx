@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import MyDocumentViewer from "./MyDocumentViewer";
 import Sidebar from "../Sidebar";
 
+
+
+
+
 const CLangauge = () => {
     const [pdfUrl, setPdfUrl] = useState(
         "https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf"
@@ -36,4 +40,5 @@ const CLangauge = () => {
         </div>
     );
 };
+
 export default CLangauge;
