@@ -39,8 +39,5 @@ const CLangauge = () => {
         </div>
     );
 };
-<<<<<<< HEAD
 
 export default CLangauge;
-=======
->>>>>>> dc652bb86df37cbee9887416b141724106b01843
