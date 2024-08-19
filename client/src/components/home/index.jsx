@@ -14,7 +14,7 @@ const Home = () => {
   const { currentUser } = useAuth();
 
   return (
-    <div className="min-h-screen bg-black p-4 md:p-14">
+    <div className="min-h-screen bg-black p-4 md:p-">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:justify-between">
         {/* Left Column */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
@@ -69,4 +69,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
