@@ -7,17 +7,15 @@ const MyDocumentViewer = ({ pdfUrl }) => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <div className="relative w-full max-w-4xl h-full max-h-screen bg-white rounded-lg shadow-lg overflow-hidden">
-        <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
-          <div className="w-full h-full">
-            <Viewer
-              fileUrl={pdfUrl}
-              plugins={[defaultLayoutPluginInstance]}
-            />
-          </div>
-        </Worker>
-      </div>
+    <div className="flex justify-center items-center h-full w-full bg-zinc-800 p-4 rounded-lg shadow-lg mt-7">
+      <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
+        <div className="w-full h-full max-w-full max-h-full overflow-auto">
+          <Viewer
+            fileUrl={pdfUrl}
+            plugins={[defaultLayoutPluginInstance]}
+          />
+        </div>
+      </Worker>
     </div>
   );
 };
