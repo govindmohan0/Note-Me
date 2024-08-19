@@ -23,7 +23,7 @@ const Contribute = ({ title }) => {
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: 'Web Wizard',
+      to_name: 'Govind Mohan Shah',
       message: message,
     };
 
@@ -36,7 +36,7 @@ const Contribute = ({ title }) => {
       setMessage('');
     } catch (error) {
       console.error('Error sending email:', error);
-      setStatus('Error! There was a problem sending your message.');
+      setStatus('Error! There was a problem sending your message. Kindly check your internet connection');
       // Log additional error details to the console
       if (error.response) {
         console.error('Response error:', error.response);
