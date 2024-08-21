@@ -4,18 +4,24 @@ import Sidebar from "../Sidebar";
 
 const SQL = () => {
     const [pdfUrl, setPdfUrl] = useState(
-        "https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf"
+        "https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/1%20Database.pdf"
     );
 
     // Define options specific to SQL
     const SQLOptions = [
-        { name: 'Introduction to SQL', pdfUrl: 'https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf' },
-        { name: 'SQL Basics', pdfUrl: 'https://raw.githubusercontent.com/py-pdf/sample-files/main/004-pdflatex-4-pages/pdflatex-4-pages.pdf' },
-        { name: 'Advanced SQL Queries', pdfUrl: 'https://www.some-other-pdf-url.com/advanced-sql-queries.pdf' },
-        { name: 'Database Design', pdfUrl: 'https://www.some-other-pdf-url.com/database-design.pdf' },
-        { name: 'SQL Optimization', pdfUrl: 'https://www.some-other-pdf-url.com/sql-optimization.pdf' },
-        { name: 'Stored Procedures', pdfUrl: 'https://www.some-other-pdf-url.com/stored-procedures.pdf' },
-        { name: 'SQL Transactions', pdfUrl: 'https://www.some-other-pdf-url.com/sql-transactions.pdf' },
+        { name: 'Introduction to SQL', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/1%20Database.pdf' },
+        { name: 'SQL Basics', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/2%20SQL.pdf' },
+        { name: 'How Does SQL Works', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/3%20How%20does%20SQL%20works.pdf' },
+        { name: 'Constraints', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/4%20SQL%20constraints.pdf' },
+        { name: 'SQL Query Execution', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/5%20SQL%20query%20execution%20order.pdf' },
+        { name: 'SQL Operations', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/6%20operations.pdf' },
+        { name: 'Errors in SQL', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/7%20Errors%20in%20SQL.pdf' },
+        { name: 'Joins', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/8%20SQL%20Joins.pdf' },
+        { name: 'Keys', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/9%20keys.pdf' },
+        { name: 'Comit and Rollback', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/10%20comit%20and%20rollbacks.pdff' },
+
+
+
         // Add more options as needed
     ];
 
