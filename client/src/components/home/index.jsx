@@ -17,7 +17,7 @@ const Home = () => {
     <div className="min-h-screen bg-black p-4 md:p-">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:justify-between">
         {/* Left Column */}
-        <div className="w-full md:w-1/2 mb-8 md:mb-0">
+        <div className="w-full md:w-1/2 mb-8 md:mb-0 ml-5">
           <div className="text-4xl md:text-5xl font-bold pb-4 md:pb-8 text-gray-300">
             Hello{" "}
             <span className="text-yellow-500">

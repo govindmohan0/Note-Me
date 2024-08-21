@@ -5,7 +5,7 @@ const resources = [
   { title: 'Previous Paper', description: 'B.Tech, BCA, MCA', bgColor: 'bg-gray-800', icon: '📝', route: '/previous-paper' },
   { title: 'Notes', description: 'SRM AP (B.Tech)', bgColor: 'bg-indigo-600', icon: '📒', route: '/notes' },
   { title: 'Syllabus', description: 'SRM AP (B.Tech)', bgColor: 'bg-yellow-500', icon: '📋', route: '/syllabus' },
-  { title: 'E-Books', description: 'Digital & Handwritten', bgColor: 'bg-green-600', icon: '📚', route: '/ebooks' },
+  { title: 'Node Js', description: 'Programming', bgColor: 'bg-green-600', icon: '📚', route: '/nodejs' },
   { title: 'C', description: 'Programming', bgColor: 'bg-teal-500', icon: '💻', route: '/c' },
   { title: 'C++', description: 'Programming', bgColor: 'bg-blue-500', icon: '💻', route: '/cpp' },
   { title: 'Java', description: 'Programming', bgColor: 'bg-red-500', icon: '💻', route: '/java' },

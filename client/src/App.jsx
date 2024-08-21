@@ -11,7 +11,7 @@ import NotFound from './components/nav/NotFound';
 import AboutUs from './components/nav/AboutUs';
 import Prevquestion from './components/Resources/Prevquestion';
 import Notes from './components/Resources/Notes';
-import Ebook from './components/Resources/Ebook';
+import Node from './components/Resources/Node';
 import CLanguage from './components/Resources/CLanguage';
 import CPP from './components/Resources/CPP';
 import Python from './components/Resources/Python';
@@ -60,7 +60,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
               <Route path="/previous-paper" element={<Prevquestion />} />
               <Route path="/notes" element={<Notes />} />
-              <Route path="/ebooks" element={<Ebook />} />
+              <Route path="/nodejs" element={<Node />} />
               <Route path="/syllabus" element={<Syllabus />} />
               <Route path="/c" element={<CLanguage />} />
               <Route path="/cpp" element={<CPP />} />
