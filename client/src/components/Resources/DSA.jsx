@@ -23,7 +23,7 @@ const DSA = () => {
         { name: 'Stack and Queue Animated', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/Stack%20and%20Queue.pdf' },
         { name: 'Tree', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/12%20DS_Trees.pdf' },
         { name: 'Types of Tree', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/13%20DS_Types%20of%20Tress.pdf' },
-        { name: 'Tree Animated', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/Tree%20Part%201.pdff' },
+        { name: 'Tree Animated', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/Tree%20Part%201.pdf' },
         { name: 'Recursion and Backtracking', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/Recursion%20and%20backtracking.pdf' },
         { name: 'Graph', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/14%20DS%20Graph.pdf' },
         { name: 'Graph Traversal', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/DSA/15%20Graph%20Traversal%20Algorithm.pdf' },

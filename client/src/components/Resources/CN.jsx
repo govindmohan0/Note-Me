@@ -4,17 +4,20 @@ import Sidebar from "../Sidebar";
 
 const CN = () => {
     const [pdfUrl, setPdfUrl] = useState(
-        "https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf"
+        "https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Introduction.pdf"
     );
 
-    // Define options specific to the C Language
     const CNoption = [
-        { name: 'Introduction', pdfUrl: 'https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf' },
-        { name: 'Advanced C', pdfUrl: 'https://raw.githubusercontent.com/py-pdf/sample-files/main/004-pdflatex-4-pages/pdflatex-4-pages.pdf' },
-        { name: 'Data Structures', pdfUrl: 'https://www.some-other-pdf-url.com/data-structures.pdf' },
-        { name: 'Algorithms', pdfUrl: 'https://www.some-other-pdf-url.com/algorithms.pdf' },
-        { name: 'System Programming', pdfUrl: 'https://www.some-other-pdf-url.com/system-programming.pdf' },
-        { name: 'Operating Systems', pdfUrl: 'https://www.some-other-pdf-url.com/operating-systems.pdf' },
+        { name: 'Introduction to Computer Network', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Introduction.pdf' },
+        { name: 'Networking Basics', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Networking_Basics.pdf' },
+        { name: 'Data Link Layer', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Data_Link_Layer.pdf' },
+        { name: 'Netwrok Layer', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Network_Layer.pdf' },
+        { name: 'Transport Layer', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Transport_Layer.pdf' },
+        { name: 'Application Layer', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Application_Layer.pdf' },
+        { name: 'Network Security', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Network_Security.pdf' },
+        { name: 'Advanced Networking', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/CN/Advanced_Networking.pdf' },
+
+     
         // Add more options as needed
     ];
 
