@@ -161,16 +161,20 @@ const Landing = () => {
         draggable
       />
 
-  <div className="flex flex-row px-4 py-2 dark:bg-black dark:text-gray-100 rounded-xl">
-        <div className="px-4 py-2">
+      {/* Dropdowns Container */}
+      <div className="flex flex-col sm:flex-row justify-between items-center px-4 py-2 bg-gray-100 dark:bg-black dark:text-gray-100 rounded-xl">
+        <div className="w-full sm:w-auto px-4 py-2">
           <LanguagesDropdown onSelectChange={onSelectChange} />
         </div>
-        <div className="px-4 py-2">
+        <div className="w-full sm:w-auto px-4 py-2">
           <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
         </div>
       </div>
-      <div className="flex flex-row space-x-4 items-start px-4 py-4 dark:bg-zinc-900 rounded-3xl">
-        <div className="flex flex-col w-full h-full justify-start items-end border-2 border-gray-800 rounded-lg">
+
+      {/* Main Container */}
+      <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-start px-4 py-4 dark:bg-zinc-900 rounded-3xl">
+        {/* Code Editor Window */}
+        <div className="flex flex-col w-full lg:w-2/3 h-full justify-start items-end border-2 border-gray-800 rounded-lg">
           <CodeEditorWindow
             code={code}
             onChange={onChange}
@@ -179,9 +183,10 @@ const Landing = () => {
           />
         </div>
 
-        <div className="right-container flex flex-shrink-0 w-[30%] flex-col dark:bg-black  border-2 border-gray-800 rounded-xl">
-          <OutputWindow  outputDetails={outputDetails} />
-          <div className="flex flex-col items-end px-4 py-4">
+        {/* Output and Custom Input Section */}
+        <div className="right-container flex flex-col lg:w-1/3 w-full dark:bg-black border-2 border-gray-800 rounded-xl p-4 space-y-4">
+          <OutputWindow outputDetails={outputDetails} />
+          <div className="flex flex-col items-end">
             <CustomInput
               customInput={customInput}
               setCustomInput={setCustomInput}
@@ -189,7 +194,7 @@ const Landing = () => {
             <button
               onClick={handleCompile}
               disabled={!code}
-              className={`mt-4 border-2 rounded-md shadow-lg px-4 py-2 transition duration-300 ${
+              className={`mt-4 w-full lg:w-auto border-2 rounded-md shadow-lg px-4 py-2 transition duration-300 ${
                 processing
                   ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                   : "bg-blue-500 text-white hover:bg-blue-600"
@@ -206,4 +211,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
