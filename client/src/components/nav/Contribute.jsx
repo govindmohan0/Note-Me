@@ -36,23 +36,15 @@ const Contribute = ({ title }) => {
       setMessage('');
     } catch (error) {
       console.error('Error sending email:', error);
-      setStatus('Error! There was a problem sending your message. Kindly check your internet connection');
-      // Log additional error details to the console
-      if (error.response) {
-        console.error('Response error:', error.response);
-      } else if (error.request) {
-        console.error('Request error:', error.request);
-      } else {
-        console.error('Error message:', error.message);
-      }
+      setStatus('Error! There was a problem sending your message. Kindly check your internet connection.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="contribute-container flex flex-col md:flex-row justify-center items-center min-h-screen bg-black relative">
-      <div className="form-container bg-slate-700 p-8 rounded-lg shadow-lg w-full max-w-md md:mr-8">
+    <div className="contribute-container flex flex-col md:flex-row justify-center items-center min-h-screen bg-black relative p-4 md:p-8 mt-16">
+      <div className="form-container bg-slate-700 p-8 rounded-lg shadow-lg w-full max-w-md md:mr-8 relative">
         {loading && (
           <div className="absolute inset-0 bg-black bg-opacity-75 flex justify-center items-center">
             <HashLoader color="#4A90E2" />
@@ -113,11 +105,12 @@ const Contribute = ({ title }) => {
         </form>
       </div>
 
-      <div className="animation-container hidden md:block w-full md:w-1/2 mt-8 md:mt-0">
+      {/* Animation container */}
+      <div className="hidden md:block md:w-1/2 mt-8 md:mt-0">
         <Example animationData={Study} />
       </div>
 
-      <div className="animation-container md:hidden w-full mt-8">
+      <div className="md:hidden w-full mt-8">
         <Example animationData={Study} />
       </div>
     </div>

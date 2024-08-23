@@ -27,7 +27,7 @@ import DSA from './components/Resources/DSA';
 import OS from './components/Resources/OS';
 import CN from './components/Resources/CN';
 import DBMS from './components/Resources/DBMS';
-
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -82,6 +82,7 @@ function App() {
           </div>
         )}
       </LoadingProvider>
+      <Analytics />
     </AuthProvider>
   );
 }

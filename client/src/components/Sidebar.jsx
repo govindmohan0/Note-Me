@@ -5,8 +5,10 @@ const Sidebar = ({ options, onOptionSelect }) => {
     return (
         <div className="w-full md:w-64 bg-gradient-to-b from-gray-800 to-gray-900 text-white p-4 md:p-6 h-screen shadow-xl flex flex-col">
             {/* Menu Header */}
-            <div className="text-lg font-semibold mb-4 md:mb-8 mt-4 md:mt-0 tracking-wide">Menu</div>
-            
+            <div className="text-lg font-semibold mb-4 md:mb-8 mt-4 md:mt-0 tracking-wide">
+                Menu
+            </div>
+
             {/* Scrollable Menu Options */}
             <ul className="space-y-4 flex-grow overflow-y-auto">
                 {options.map((option, index) => (

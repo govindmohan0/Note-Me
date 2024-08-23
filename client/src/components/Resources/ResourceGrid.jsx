@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Ensure you have react-router-dom installed
+import { Link } from 'react-router-dom';
 
 const resources = [
   { title: 'Previous Paper', description: 'B.Tech, BCA, MCA', bgColor: 'bg-gray-800', icon: '📝', route: '/previous-paper' },
@@ -14,15 +14,15 @@ const resources = [
 
 const ResourceGrid = () => {
   return (
-    <div className="min-h-8 bg-black flex flex-col items-center p-8 rounded-3xl">
+    <div className="min-h-8 bg-black flex flex-col items-center p-4 sm:p-6 md:p-8 rounded-3xl">
       <p className="text-center text-3xl font-bold mb-8 text-gray-100">Resources</p>
-      <div className="grid grid-cols-4 gap-8 p-8 bg-transparent rounded-2xl glowing-shadow">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 bg-transparent rounded-2xl glowing-shadow">
         {resources.map((resource, index) => (
           <Link to={resource.route} key={index} className="relative block">
             <div className={`${resource.bgColor} p-6 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-2xl`}>
-              <div className="text-5xl mb-3">{resource.icon}</div>
-              <h2 className="text-xl font-bold text-white">{resource.title}</h2>
-              <p className="text-md text-gray-300">{resource.description}</p>
+              <div className="text-4xl sm:text-5xl mb-3">{resource.icon}</div>
+              <h2 className="text-lg sm:text-xl font-bold text-white">{resource.title}</h2>
+              <p className="text-sm sm:text-md text-gray-300">{resource.description}</p>
             </div>
             <div className="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity rounded-lg"></div>
           </Link>
