@@ -71,9 +71,9 @@ const Header = () => {
              <Link
                 to='/flashcard-ai'
                 className={`text-lg font-semibold transition duration-400 ${
-                  activeLink === 'onlinecompiler' ? 'text-indigo-600' : 'text-white'
+                  activeLink === 'flashcard-ai' ? 'text-indigo-600' : 'text-white'
                 } hover:text-indigo-600`}
-                onClick={() => handleLinkClick('onlinecompiler')}
+                onClick={() => handleLinkClick('flashcard-ai')}
               >
                FlashCard-AI
               </Link>

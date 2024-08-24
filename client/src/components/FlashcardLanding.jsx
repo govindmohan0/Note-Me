@@ -7,36 +7,52 @@ const FlashcardLanding = () => {
     const [flashcardsData, setFlashcardsData] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const handleGenerateFlashcards = async () => {
-        setLoading(true);
+    const fetchFlashcardsData = async (context, numFlashcards) => {
+        const prompt = `Please generate ${numFlashcards} flashcards with questions and answers based on the following context:\n${context}`;
+        const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyD8ZBJkzUkpC46RmH6D84K8R9XwzwSAbSU`;
+
         try {
-            const response = await axios.post('https://api.gemini-ai.com/v1/generate-flashcards', {
-                prompt: `Generate ${numFlashcards} flashcards with questions and answers based on the following context:\n\n${context}\n\n1.`,
-                max_tokens: 150,
-                n: numFlashcards,
-                stop: ["\n"]
-            }, {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
                 headers: {
-                    'Authorization': `AIzaSyAKLmZEj0g2JXZvgnB9NpXwisDAUeMQZ8Y`,
-                    'Content-Type': 'application/json'
-                }
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    contents: [
+                        {
+                            role: "user",
+                            parts: [{ text: prompt }],
+                        },
+                    ],
+                }),
             });
-    
-            const flashcards = response.data.flashcards.map((flashcard, index) => ({
+
+            const data = await response.json();
+
+            // Assuming the API returns flashcards in the response's `content` field
+            const flashcards = data.candidates[0]?.content?.parts.map((flashcard, index) => ({
                 id: index,
-                question: flashcard.question,
-                answer: flashcard.answer,
+                question: flashcard.question || `Question ${index + 1}`,
+                answer: flashcard.answer || `Answer ${index + 1}`,
             }));
-    
-            setFlashcardsData(flashcards);
+
+            return flashcards || [];
         } catch (error) {
             console.error('Error generating flashcards:', error);
+            return [];
         }
+    };
+
+    const handleGenerateFlashcards = async () => {
+        setLoading(true);
+        const flashcards = await fetchFlashcardsData(context, numFlashcards);
+        setFlashcardsData(flashcards);
         setLoading(false);
     };
 
     const handleInputChange = (index, side, value) => {
-        const updatedFlashcards = flashcardsData.map((flashcard, i) => 
+        const updatedFlashcards = flashcardsData.map((flashcard, i) =>
             i === index ? { ...flashcard, [side]: value } : flashcard
         );
         setFlashcardsData(updatedFlashcards);
@@ -48,7 +64,7 @@ const FlashcardLanding = () => {
     };
 
     return (
-        <div className="p-8 bg-gray-900 min-h-screen flex flex-col items-center text-white mt-16">
+        <div className="p-8 bg-gray-900 min-h-screen flex flex-col items-center text-white mt-14">
             <div className="mb-8 w-full max-w-3xl">
                 <div className="flex justify-between items-center mb-6">
                     <h1 className="text-3xl font-bold">Flashcards • ASD</h1>
