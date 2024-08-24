@@ -68,6 +68,15 @@ const Header = () => {
         >
           {userLoggedIn ? (
             <>
+             <Link
+                to='/flashcard-ai'
+                className={`text-lg font-semibold transition duration-400 ${
+                  activeLink === 'onlinecompiler' ? 'text-indigo-600' : 'text-white'
+                } hover:text-indigo-600`}
+                onClick={() => handleLinkClick('onlinecompiler')}
+              >
+               FlashCard-AI
+              </Link>
               <Link
                 to='/onlinecompiler'
                 className={`text-lg font-semibold transition duration-400 ${

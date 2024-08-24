@@ -28,6 +28,7 @@ import OS from './components/Resources/OS';
 import CN from './components/Resources/CN';
 import DBMS from './components/Resources/DBMS';
 import { Analytics } from '@vercel/analytics/react';
+import FlashcardLanding from './components/FlashcardLanding';
 function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
@@ -75,6 +76,7 @@ function App() {
               <Route path="/daa" element={<DAA />} />
               <Route path="/sql" element={<SQL />} />
               <Route path="/react" element={<REACTjs />} />
+              <Route path="/flashcard-ai" element={<FlashcardLanding/>} />
             {/*  <Route path="/c/:courseId/topic/:topicId" component={AboutUs} />   */}
 
 
