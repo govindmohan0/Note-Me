@@ -18,11 +18,15 @@ const ResourceGrid = () => {
       <p className="text-center text-3xl font-bold mb-8 text-gray-100">Resources</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 bg-transparent rounded-2xl glowing-shadow">
         {resources.map((resource, index) => (
-          <Link to={resource.route} key={index} className="relative block">
-            <div className={`${resource.bgColor} p-6 rounded-lg flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-2xl`}>
+          <Link 
+            to={resource.route} 
+            key={index} 
+            className="relative block">
+            <div 
+              className={`${resource.bgColor} p-6 rounded-lg flex flex-col items-center justify-between transition-transform transform hover:scale-105 hover:shadow-2xl min-h-[200px] aspect-w-1 aspect-h-1`}>
               <div className="text-4xl sm:text-5xl mb-3">{resource.icon}</div>
               <h2 className="text-lg sm:text-xl font-bold text-white">{resource.title}</h2>
-              <p className="text-sm sm:text-md text-gray-300">{resource.description}</p>
+              <p className="text-sm sm:text-md text-gray-300 text-center">{resource.description}</p>
             </div>
             <div className="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity rounded-lg"></div>
           </Link>
