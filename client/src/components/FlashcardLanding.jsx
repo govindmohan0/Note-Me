@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const FlashcardLanding = () => {
     const [context, setContext] = useState('');
@@ -7,10 +6,19 @@ const FlashcardLanding = () => {
     const [flashcardsData, setFlashcardsData] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const fetchFlashcardsData = async (context, numFlashcards) => {
+    const fetchFlashcardsData = async () => {
+        const apiKey = `AIzaSyD8ZBJkzUkpC46RmH6D84K8R9XwzwSAbSU`;
+        console.log("API Key:", apiKey); // Debugging log
+
+        if (!apiKey) {
+            console.error('API key is not defined. Please set REACT_APP_GEMINI_API_KEY in your environment variables.');
+            return [];
+        }
+
         const prompt = `Please generate ${numFlashcards} flashcards with questions and answers based on the following context:\n${context}`;
-        const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyD8ZBJkzUkpC46RmH6D84K8R9XwzwSAbSU`;
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
+
+        console.log("Prompt being sent to API:", prompt); // Log the prompt for debugging
 
         try {
             const response = await fetch(apiUrl, {
@@ -28,16 +36,23 @@ const FlashcardLanding = () => {
                 }),
             });
 
-            const data = await response.json();
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error('API error:', errorData);
+                return [];
+            }
 
-            // Assuming the API returns flashcards in the response's `content` field
-            const flashcards = data.candidates[0]?.content?.parts.map((flashcard, index) => ({
+            const data = await response.json();
+            console.log("API Response:", data); // Log the API response for debugging
+
+            // Extract flashcards from the API response
+            const flashcards = data.candidates?.[0]?.content?.parts?.map((flashcard, index) => ({
                 id: index,
                 question: flashcard.question || `Question ${index + 1}`,
                 answer: flashcard.answer || `Answer ${index + 1}`,
-            }));
+            })) || [];
 
-            return flashcards || [];
+            return flashcards;
         } catch (error) {
             console.error('Error generating flashcards:', error);
             return [];
@@ -46,7 +61,7 @@ const FlashcardLanding = () => {
 
     const handleGenerateFlashcards = async () => {
         setLoading(true);
-        const flashcards = await fetchFlashcardsData(context, numFlashcards);
+        const flashcards = await fetchFlashcardsData();
         setFlashcardsData(flashcards);
         setLoading(false);
     };
@@ -72,7 +87,7 @@ const FlashcardLanding = () => {
                         CANCEL
                     </button>
                 </div>
-                
+
                 <textarea
                     value={context}
                     onChange={(e) => setContext(e.target.value)}
@@ -95,7 +110,7 @@ const FlashcardLanding = () => {
                             type="number"
                             id="amount"
                             value={numFlashcards}
-                            onChange={(e) => setNumFlashcards(e.target.value)}
+                            onChange={(e) => setNumFlashcards(parseInt(e.target.value, 10) || 1)}
                             min="1"
                             className="w-16 p-2 bg-gray-800 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
