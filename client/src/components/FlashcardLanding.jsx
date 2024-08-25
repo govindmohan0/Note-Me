@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import QuestionLogo from './Questionlogo';
 
 function ArrObj(str) {
   if (str.startsWith('```json') && str.endsWith('```')) {
@@ -97,20 +98,24 @@ const FlashcardLanding = () => {
     setFlipped(updatedFlipped);
   };
 
+  // Define the missing handleCancel function
   const handleCancel = () => {
-    setContext('');
-    setFlashcardsData([]);
-    setFlipped([]);
+    setContext(''); // Clear the context
+    setFlashcardsData([]); // Clear the generated flashcards
+    setFlipped([]); // Reset the flipped state
   };
 
   return (
     <div className="p-4 md:p-8 bg-black min-h-screen flex flex-col text-white mt-14">
       <div className="mb-8 w-full max-w-7xl mx-auto px-2 md:px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4 md:mb-0">Flashcards</h1>
+          <div className="flex items-center">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4 md:mb-0">Flashcards</h1>
+            <QuestionLogo /> {/* Adding the QuestionLogo component next to the title */}
+          </div>
           <button
             onClick={handleCancel}
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out mt-4 md:mt-0"
           >
             CANCEL
           </button>
