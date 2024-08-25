@@ -34,10 +34,11 @@ NoteMe is a comprehensive web application designed for CSE students to streamlin
 To run NoteMe locally, follow these steps:
 
 ### Prerequisites
-- Node.js
-- MongoDB (for local development)
+- React.JS
+- Email.JS Account (for Email Point)
 - Firebase Account (for authentication)
-
+- Judge0 API Key
+- Gemini-AI API Key
 ### Steps
 
 1. **Clone the Repository**
