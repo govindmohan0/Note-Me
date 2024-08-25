@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLoading } from '../Loading/LoadingContext';
 import Study from '../../assets/Contact.json';
-import Example from '../Example';
+import Example from '../Illustrator';
 import HashLoader from 'react-spinners/HashLoader';
 
 const Contribute = ({ title }) => {

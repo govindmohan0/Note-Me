@@ -1,5 +1,5 @@
 import React from 'react';
-import Example from '../Example';
+import Example from '../Illustrator';
 import Not from '../../assets/404Error.json';
 
 const NotFound = () => {

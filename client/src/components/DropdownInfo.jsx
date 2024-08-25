@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Not from '../../src/assets/Confused.json';
-import Example from './Example';
+import Example from './Illustrator';
 
 const DropdownInfo = () => {
     const [activeIndex, setActiveIndex] = useState(null);

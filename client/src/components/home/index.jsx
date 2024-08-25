@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "../../contexts/authContext";
-import Example from "../Example";
+import Example from "../Illustrator";
 import ResourceGrid from "../Resources/ResourceGrid";
 import "./Home.css";
 import Bottom from "../Bottom";
