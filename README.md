@@ -28,7 +28,7 @@ NoteMe is a comprehensive web application designed for CSE students to streamlin
 
 ### 4. **AI-Driven Flashcards (In Progress)**
 - **Flashcard Generation**: AI-driven flashcards powered by OpenAI API OR Gemini  are being integrated into the platform. Students will be able to input study material to generate personalized flashcards, helping them assess their knowledge effectively.
-
+  <img src="https://github.com/govindmohan0/Note-Me/blob/main/client/Output/Screenshot%202024-08-25%20193145.png">
 ## Installation
 
 To run NoteMe locally, follow these steps:
