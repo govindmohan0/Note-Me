@@ -30,12 +30,12 @@ const QuestionLogo = () => {
         }}>
           <h4 className="font-bold">What is a Flashcard?</h4>
           <p className="text-gray-800">
-            A flashcard is a card bearing information on both sides, used for testing and improving memory. 
-            Flashcards can be used to memorize vocabulary, dates, formulas, or any subject matter.
+            A flashcard is a card bearing Question and Answer on both sides, used for testing and improving memory. 
+            Flashcards can be used to memorize Knowledge and information based on Context provided for Learning Purpose or any subject matter.
           </p>
           <p className="mt-2 text-gray-800">
             <strong>How it works:</strong><br />
-            One side typically has a question or prompt, and the other side has the answer or related information.
+            One side typically has a question or prompt, and the other side has the answer or related information that will be fetch from the Context Provided with respect to Amount .
           </p>
         </div>
       )}
