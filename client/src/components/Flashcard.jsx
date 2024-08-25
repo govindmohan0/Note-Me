@@ -8,7 +8,7 @@ const Flashcard = ({ question, answer }) => {
     };
 
     return (
-        <div className="max-w-xs w-full bg-gray-800 text-white rounded-lg shadow-md p-4 m-2 mt-14">
+        <div className="max-w-xs w-full bg-gray-800 text-white rounded-lg shadow-md p-4 m-2">
             <div className="h-40 flex items-center justify-center">
                 <p className="text-sm leading-relaxed text-center">
                     {isFlipped ? answer : question}
