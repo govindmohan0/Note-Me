@@ -10,10 +10,11 @@ const OS = () => {
     // Define options specific to Operating Systems
     const OSOptions = [
         { name: 'Introduction to Operating Systems', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/1%20UNIT%20I.pdf' },
-        { name: 'Processes and Threads', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/2%20UNIT%20II.pdf' },
-        { name: 'Memory Management', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/3%20UNIT%20III.pdf' },
-        { name: 'File Systems', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/4%20UNIT%20IV.pdf' },
-        { name: 'Deadlocks and Disk Management', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/5%20UNIT%20V.pdf' },
+{ name: 'Processes and Threads', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/2%20UNIT%20II.pdf' },
+{ name: 'Memory Management', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/3%20UNIT%20III.pdf' },
+{ name: 'File Systems', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/4%20UNIT%20IV.pdf' },
+{ name: 'I/O Systems and Security', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/OS/5%20UNIT%20V.pdf' }
+
       
         // Add more options as needed
     ];
