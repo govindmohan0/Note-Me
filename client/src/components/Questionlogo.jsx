@@ -28,7 +28,7 @@ const QuestionLogo = () => {
           boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
           zIndex: 1000,
         }}>
-          <h4 className="font-bold">What is a Flashcard?</h4>
+          <h4 className="font-bold text-gray-800">What is a Flashcard?</h4>
           <p className="text-gray-800">
             A flashcard is a card bearing Question and Answer on both sides, used for testing and improving memory. 
             Flashcards can be used to memorize Knowledge and information based on Context provided for Learning Purpose or any subject matter.
