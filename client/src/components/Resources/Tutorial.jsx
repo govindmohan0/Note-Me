@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const Tutorial = () => {
+const Tutorial = ({ title }) => {
     const tutorials = [
         { icon: 'https://imgs.search.brave.com/Q--MjQmzhJDTZDFvE-IIVOPn43ZvWusW1XgMpBKbYZ8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9icmFu/ZHNsb2dvcy5jb20v/d3AtY29udGVudC91/cGxvYWRzL2ltYWdl/cy9qYXZhLWxvZ28t/MS5wbmc', title: 'JAVA', description: 'Programming', link: '/java' },
         { icon: 'https://imgs.search.brave.com/SDGwL0jFyliEFLCRQEoP0UzezkpKKk9PFPeorfuzmwQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzU5LzYxLzM5/LzM2MF9GXzc1OTYx/Mzk2NV9oVkQ0MEJ2/T1dMb3BRMDMyQ1V4/ck9zbkpMSmZoOURB/bi5qcGc', title: 'C', description: 'Programming', link: '/c' },
@@ -17,6 +17,7 @@ const Tutorial = () => {
         { icon: 'https://imgs.search.brave.com/iFScTRKbWbvN_j5rO1L5slKob2IFxkCQ9az2IV5pMcE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIwLzA4/L015U1FMLUxvZ28t/NTAweDMxMy5wbmc', title: 'SQL', description: 'Tutorial', link: '/sql' },
         { icon: 'https://imgs.search.brave.com/CQbryDwdAyF7tzJAkmgUm2GiqjquFjxuCYJeDI9GRJI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtMy82/MDAvUmVhY3QuanNf/bG9nby01MTIucG5n', title: 'REACT', description: 'Tutorial', link: '/react' },
     ];
+
     const cardVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: (i) => ({
@@ -30,7 +31,7 @@ const Tutorial = () => {
 
     return (
         <div className="bg-black text-white py-8">
-            <h2 className="text-4xl font-bold text-pink-500 mb-8 text-center">Tutorials</h2>
+            <h2 className="text-4xl font-bold text-pink-500 mb-8 text-center">{title}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
                 {tutorials.map((tutorial, index) => (
                     <motion.div

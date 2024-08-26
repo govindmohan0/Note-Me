@@ -19,6 +19,15 @@ const FlashcardLanding = () => {
   const [flashcardsData, setFlashcardsData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [flipped, setFlipped] = useState([]);
+  const [error, setError] = useState('');
+
+  const countWords = (text) => {
+    return text.trim().split(/\s+/).length;
+  };
+
+  const maxFlashcardsAllowed = () => {
+    return Math.floor(countWords(context) / 8);
+  };
 
   const fetchFlashcardsData = async () => {
     const apiKey = 'AIzaSyD8ZBJkzUkpC46RmH6D84K8R9XwzwSAbSU';
@@ -70,6 +79,19 @@ const FlashcardLanding = () => {
   };
 
   const handleGenerateFlashcards = async () => {
+    const wordCount = countWords(context);
+    if (wordCount < 30) {
+      setError('Context must be at least 30 words long.');
+      return;
+    }
+
+    const maxFlashcards = maxFlashcardsAllowed();
+    if (numFlashcards > maxFlashcards) {
+      setError(`You can generate a maximum of ${maxFlashcards} flashcards based on the provided context.`);
+      return;
+    }
+
+    setError('');
     setLoading(true);
     const flashcards = await fetchFlashcardsData();
     setFlashcardsData(flashcards);
@@ -97,12 +119,23 @@ const FlashcardLanding = () => {
     setFlipped(updatedFlipped);
   };
 
+  const handleCancel = () => {
+    setContext('');
+    setNumFlashcards(3);
+    setFlashcardsData([]);
+    setError('');
+    setFlipped([]);
+  };
+
   return (
     <div className="p-4 md:p-8 bg-black min-h-screen flex flex-col text-white mt-14">
       <div className="mb-8 w-full max-w-7xl mx-auto px-2 md:px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4 md:mb-0">Flashcards</h1>
-          <button className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out">
+          <button
+            onClick={handleCancel}
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out"
+          >
             CANCEL
           </button>
         </div>
@@ -114,6 +147,8 @@ const FlashcardLanding = () => {
           placeholder="Add some context for the AI to generate flashcards."
           className="w-full p-4 bg-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-400"
         />
+
+        {error && <p className="text-red-500 mt-2">{error}</p>}
 
         <div className="flex flex-col md:flex-row justify-between items-center mt-6">
           <button
@@ -147,7 +182,7 @@ const FlashcardLanding = () => {
           {flashcardsData.map((flashcard, index) => (
             <div
               key={flashcard.id}
-              className="bg-gray-800 rounded-lg p-4 md:p-6 shadow-lg transition transform hover:scale-105 flex flex-col justify-between"
+              className="bg-zinc-900 rounded-lg p-4 md:p-6 shadow-lg transition transform hover:scale-105 flex flex-col justify-between"
             >
               <div className="flex justify-between items-center mb-2">
                 <span className="font-semibold text-lg text-gray-200">{flipped[index] ? 'Answer' : 'Question'}</span>
@@ -170,7 +205,7 @@ const FlashcardLanding = () => {
                 value={flipped[index] ? flashcard.answer : flashcard.question}
                 onChange={(e) => handleInputChange(index, flipped[index] ? 'answer' : 'question', e.target.value)}
                 rows="3"
-                className="w-full p-3 bg-gray-900 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500 mt-4"
+                className="w-full p-3 bg-zinc-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500 mt-4"
                 placeholder={flipped[index] ? "Enter the answer..." : "Enter the question..."}
               />
             </div>

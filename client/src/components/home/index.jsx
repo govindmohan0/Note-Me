@@ -50,7 +50,7 @@ const Home = () => {
       </div>
 
       <div className="mt-12">
-        <Tutorial />
+      <Tutorial title="Tutorial" />
       </div>
 
       <div className="mt-12">
