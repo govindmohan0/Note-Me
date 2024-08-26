@@ -18,7 +18,7 @@ const SQL = () => {
         { name: 'Errors in SQL', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/7%20Errors%20in%20SQL.pdf' },
         { name: 'Joins', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/8%20SQL%20Joins.pdf' },
         { name: 'Keys', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/9%20keys.pdf' },
-        { name: 'Comit and Rollback', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/10%20comit%20and%20rollbacks.pdff' },
+        { name: 'Comit and Rollback', pdfUrl: 'https://raw.githubusercontent.com/govindmohan0/Note-me-Notes/main/SQL/10%20comit%20and%20rollbacks.pdf' },
 
 
 
