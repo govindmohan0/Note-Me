@@ -9,12 +9,12 @@ const OS = () => {
 
     // Define options specific to Operating Systems
     const OSOptions = [
-        { name: 'Introduction to Operating Systems', pdfUrl: 'https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf' },
-        { name: 'Processes and Threads', pdfUrl: 'https://raw.githubusercontent.com/py-pdf/sample-files/main/004-pdflatex-4-pages/pdflatex-4-pages.pdf' },
-        { name: 'Memory Management', pdfUrl: 'https://www.some-other-pdf-url.com/memory-management.pdf' },
-        { name: 'File Systems', pdfUrl: 'https://www.some-other-pdf-url.com/file-systems.pdf' },
-        { name: 'Scheduling Algorithms', pdfUrl: 'https://www.some-other-pdf-url.com/scheduling-algorithms.pdf' },
-        { name: 'Deadlock and Synchronization', pdfUrl: 'https://www.some-other-pdf-url.com/deadlock-synchronization.pdf' },
+        { name: 'Introduction to Operating Systems', pdfUrl: 'https://github.com/govindmohan0/Note-me-Notes/blob/main/OS/1%20UNIT%20I.pdf' },
+        { name: 'Processes and Threads', pdfUrl: 'https://github.com/govindmohan0/Note-me-Notes/blob/main/OS/2%20UNIT%20II.pdf' },
+        { name: 'Memory Management', pdfUrl: 'https://github.com/govindmohan0/Note-me-Notes/blob/main/OS/3%20UNIT%20III.pdf' },
+        { name: 'File Systems', pdfUrl: 'https://github.com/govindmohan0/Note-me-Notes/blob/main/OS/4%20UNIT%20IV.pdf' },
+        { name: 'Deadlocks and Disk Management', pdfUrl: 'https://github.com/govindmohan0/Note-me-Notes/blob/main/OS/5%20UNIT%20V.pdf' },
+      
         // Add more options as needed
     ];
 
