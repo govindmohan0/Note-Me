@@ -31,7 +31,7 @@ NoteMe is a comprehensive web application designed for CSE students to streamlin
   <img src="https://github.com/govindmohan0/Note-Me/blob/main/client/Output/Screenshot%202024-08-25%20193145.png">
 ## Installation
 
-To run NoteMe locally, follow these steps:
+To run Note Me locally, follow these steps:
 
 ### Prerequisites
 - React.JS
