@@ -1,4 +1,4 @@
-# NoteMe
+# Note Me
 
 NoteMe is a comprehensive web application designed for CSE students to streamline their access to essential study resources. The platform provides a one-stop solution for accessing previous college exam papers, PDF handwritten notes, and other study materials contributed by peers. In addition, NoteMe features an integrated online compiler and is in the process of incorporating AI-driven flashcards for personalized revision.
 
