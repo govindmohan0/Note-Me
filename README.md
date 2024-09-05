@@ -7,7 +7,7 @@ NoteMe is a comprehensive web application designed for CSE students to streamlin
 
 # Features
 
-### 1. **User Authentication**
+### 1. **User Authentications**
 - **Firebase Authentication**: Secure and seamless login experience for students. Firebase Auth manages user accounts and tracks real-time usage, ensuring a personalized experience.
   <img src="https://github.com/govindmohan0/Note-Me/blob/main/client/Output/Screenshot%202024-08-22%20212227.png">
 
