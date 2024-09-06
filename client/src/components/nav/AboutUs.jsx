@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaRegClock, FaCode, FaFileAlt, FaUserFriends } from 'react-icons/fa'; // Import icons
-
+import Bottom from '../Bottom'
 const AboutUs = () => {
   return (
     <div className="bg-black py-12 px-6 md:px-16 text-white">
@@ -124,6 +124,8 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <Bottom></Bottom>
+     
     </div>
   );
 };
