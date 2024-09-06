@@ -1,4 +1,4 @@
-# NoteMe
+# Note Me
 
 NoteMe is a comprehensive web application designed for CSE students to streamline their access to essential study resources. The platform provides a one-stop solution for accessing previous college exam papers, PDF handwritten notes, and other study materials contributed by peers. In addition, NoteMe features an integrated online compiler and is in the process of incorporating AI-driven flashcards for personalized revision.
 
@@ -7,7 +7,7 @@ NoteMe is a comprehensive web application designed for CSE students to streamlin
 
 # Features
 
-### 1. **User Authentication**
+### 1. **User Authentications**
 - **Firebase Authentication**: Secure and seamless login experience for students. Firebase Auth manages user accounts and tracks real-time usage, ensuring a personalized experience.
   <img src="https://github.com/govindmohan0/Note-Me/blob/main/client/Output/Screenshot%202024-08-22%20212227.png">
 
@@ -31,7 +31,7 @@ NoteMe is a comprehensive web application designed for CSE students to streamlin
   <img src="https://github.com/govindmohan0/Note-Me/blob/main/client/Output/Screenshot%202024-08-25%20193145.png">
 ## Installation
 
-To run NoteMe locally, follow these steps:
+To run Note Me locally, follow these steps:
 
 ### Prerequisites
 - React.JS
