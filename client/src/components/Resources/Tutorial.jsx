@@ -60,5 +60,4 @@ const Tutorial = ({ title }) => {
         </div>
     );
 };
-
 export default Tutorial;

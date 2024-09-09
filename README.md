@@ -77,3 +77,6 @@ Open your web browser and navigate to http://localhost:3000 to view the applicat
 # Contribute
 If you would like to contribute to NoteMe, please fork the repository and submit a pull request with your proposed changes.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
