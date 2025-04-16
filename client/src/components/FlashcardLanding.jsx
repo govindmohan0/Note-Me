@@ -30,7 +30,7 @@ const FlashcardLanding = () => {
   };
 
   const fetchFlashcardsData = async () => {
-    const apiKey = 'AIzaSyD8ZBJkzUkpC46RmH6D84K8R9XwzwSAbSU';
+    const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
 
     if (!apiKey) {
       console.error('API key is not defined. Please set REACT_APP_GEMINI_API_KEY in your environment variables.');

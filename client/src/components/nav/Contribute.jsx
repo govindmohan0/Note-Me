@@ -16,9 +16,9 @@ const Contribute = ({ title }) => {
     e.preventDefault();
     setLoading(true);
 
-    const serviceId = 'service_cqs4c0o';
-    const templateId = 'template_uexj8wh';
-    const publicKey = 'Ajcc9kYr73ReTCeSr';
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
     const templateParams = {
       from_name: name,

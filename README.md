@@ -33,17 +33,21 @@ NoteMe is a comprehensive web application designed for CSE students to streamlin
 To run Note Me locally, follow these steps:
 
 ### Prerequisites
+- Node.js and npm
 - React.JS
 - Email.JS Account (for Email Point)
 - Firebase Account (for authentication)
 - Judge0 API Key
 - Gemini-AI API Key
+
 ### Steps
 
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/yourusername/noteme.git
-   cd client
+   cd noteme
+   ```
+
 2. **Install Frontend Dependencies**
    - Navigate to the `client` directory and install the frontend dependencies:
      ```bash
@@ -52,26 +56,39 @@ To run Note Me locally, follow these steps:
      ```
 
 3. **Set Up Environment Variables**
-   - Create a `.env` file in the `client` directory and add your Firebase credentials and MongoDB URI. Example:
+   - Create a `.env` file in the `client` directory with the following variables:
      ```
-     REACT_APP_RAPID_API_HOST =
-     REACT_APP_RAPID_API_KEY = 
-     REACT_APP_RAPID_API_URL =
-     REACT_APP_API_KEY=
+     # Judge0 Online Compiler API
+     REACT_APP_RAPID_API_HOST = judge0-ce.p.rapidapi.com
+     REACT_APP_RAPID_API_KEY = your_rapid_api_key
+     REACT_APP_RAPID_API_URL = https://judge0-ce.p.rapidapi.com/submissions
 
+     # Firebase Authentication
+     REACT_APP_API_KEY = your_firebase_api_key
+
+     # Gemini AI API for Flashcards
+     REACT_APP_GEMINI_API_KEY = your_gemini_api_key
+
+     # EmailJS Configuration for Contact Form
+     REACT_APP_EMAILJS_SERVICE_ID = your_emailjs_service_id
+     REACT_APP_EMAILJS_TEMPLATE_ID = your_emailjs_template_id
+     REACT_APP_EMAILJS_PUBLIC_KEY = your_emailjs_public_key
      ```
 
-   - Make sure you replace the placeholders with your actual Firebase details.
+   - Replace the placeholder values with your actual API keys and credentials:
+     - Get Judge0 API key from [RapidAPI](https://rapidapi.com/judge0-official/api/judge0-ce)
+     - Set up a [Firebase](https://firebase.google.com/) project and get the API key
+     - Get a [Gemini AI API key](https://ai.google.dev/) for the flashcard feature
+     - Create an [EmailJS](https://www.emailjs.com/) account for the contact form
      
 4. **Run the Frontend Server**
-
-    In the client directory:
-   ```
+   In the client directory:
+   ```bash
    npm start
    ```
-5.**Access the Application**
 
-Open your web browser and navigate to http://localhost:3000 to view the application.
+5. **Access the Application**
+   Open your web browser and navigate to http://localhost:3000 to view the application.
 
 # Contribute
 If you would like to contribute to NoteMe, please fork the repository and submit a pull request with your proposed changes.
